@@ -3,10 +3,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->  <!-- Note: For one
-    time permission based journey -->
-    <uses-feature android:name="android.hardware.telephony" android:required="false" /> <!-- Note:
-    For every transactions consent based journey -->
+    <!-- <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->  <!-- Note: For one time permission based journey -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false" /> <!-- Note: For every transactions consent based journey -->
 
     <application
         android:name=".MainApplication"
@@ -26,8 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.weipl.checkout.WLCheckoutActivity" android:exported="true"
-            android:theme="@style/WLCheckoutTheme" />
+        <activity android:name="com.weipl.checkout.WLCheckoutActivity" android:exported="true" android:screenOrientation="portrait"/>
     </application>
     <queries>
         <intent>

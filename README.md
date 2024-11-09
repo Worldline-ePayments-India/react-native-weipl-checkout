@@ -149,7 +149,7 @@ To run & test sample code use below command by navigating into example folder:
  - Add below code in AndroidManifest file file of your react-native application, e.g. `YOUR_APPLICATION_ROOT_FOLDER/android/app/src/main/AndroidManifest.xml`:
 
     ```shell
-    <activity android:name="com.weipl.checkout.WLCheckoutActivity" android:exported="true" android:theme="@style/WLCheckoutTheme"/>
+    <activity android:name="com.weipl.checkout.WLCheckoutActivity" android:exported="true" android:screenOrientation="portrait"/>
     ```
 
 
