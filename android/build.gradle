@@ -5,7 +5,7 @@ buildscript {
   }
 
   dependencies {
-    classpath "com.android.tools.build:gradle:7.2.1"
+    classpath "com.android.tools.build:gradle:7.4.2"
   }
 }
 
@@ -43,6 +43,7 @@ android {
     sourceSets {
       main {
         manifest.srcFile "src/main/AndroidManifestNew.xml"
+        java.srcDirs = ['src/main/java']
       }
     }
   }
@@ -96,4 +97,3 @@ dependencies {
   implementation 'androidx.core:core-ktx:1.8.0'
 
 }
-

@@ -73,19 +73,7 @@ public class WeiplCheckoutModule extends ReactContextBaseJavaModule implements W
     public String getName() {
         return NAME;
     }
-    
-	/**
-	 * Initializes the WeiplCheckoutModule.
-	 * This method is called when the module is initialized.
-	 * It preloads data for the WLCheckoutActivity.
-	 */
-	@Override
-	public void initialize() {
-		UiThreadUtil.runOnUiThread(() -> {
-			WLCheckoutActivity.preloadData(appContext.getApplicationContext());
-		});
-		super.initialize();
-	}
+	
 
 	/**
 	 * Initiates Checkout SDK

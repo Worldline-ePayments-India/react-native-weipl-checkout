@@ -27,7 +27,7 @@ or using yarn:
 ```shell
 yarn add react-native-weipl-checkout
 ```
-**Note for Android**: Make sure that the minimum API level for your app is 21 or higher.
+**Note for Android**: Make sure that the minimum API level for your app is 24 or higher.
 
 **Note for iOS**: Make sure that the minimum deployment target for your app is iOS 13.0 or higher.
 
@@ -133,7 +133,7 @@ To run & test sample code use below command by navigating into example folder:
     <string>phonepe</string>
     <string>gpay</string>
     <string>paytm</string>
-    <string>credpe</string>
+    <string>credpay</string>
   </array>
   ```
 - For UPI Intent in **Android** please below code in AndroidManifest file of your react-native application, e.g. `YOUR_APPLICATION_ROOT_FOLDER/android/app/src/main/AndroidManifest.xml`

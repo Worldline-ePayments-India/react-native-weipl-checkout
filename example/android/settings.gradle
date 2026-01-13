@@ -1,9 +1,20 @@
-rootProject.name = 'WeiplCheckoutExample'
-apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle")
-applyNativeModulesSettingsGradle(settings)
-include ':app'
-includeBuild('../node_modules/@react-native/gradle-plugin')
 
-// Include your local plugin module
-// include ':react-native-weipl-checkout'
-// project(':react-native-weipl-checkout').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-weipl-checkout/android')
+pluginManagement {
+    includeBuild("../node_modules/@react-native/gradle-plugin")
+}
+ 
+plugins {
+    id("com.facebook.react.settings")
+}
+
+// Optional: If you need to customize autolinking (rarely needed)
+extensions.configure(com.facebook.react.ReactSettingsExtension) { ex ->
+    ex.autolinkLibrariesFromCommand()
+}
+ 
+rootProject.name = "WeiplCheckoutExample"
+ 
+include(":app")
+include(":react-native-weipl-checkout")
+project(":react-native-weipl-checkout").projectDir = new File(rootProject.projectDir, "../../android")
+includeBuild('../node_modules/@react-native/gradle-plugin')

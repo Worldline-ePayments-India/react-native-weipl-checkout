@@ -22,7 +22,6 @@ class WeiplCheckout: NSObject, RCTInitializing {
     func initialize() {
         DispatchQueue.main.async{
             self.wlCheckout = WLCheckoutViewController()
-            self.wlCheckout?.preloadData()
             
             NotificationCenter.default.addObserver(self, selector: #selector(self.wlCheckoutPaymentResponse(result:)), name: Notification.Name("wlCheckoutPaymentResponse"), object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(self.wlCheckoutPaymentError(result:)), name: Notification.Name("wlCheckoutPaymentError"), object: nil)
